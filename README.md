@@ -1,38 +1,43 @@
-
 # Консольное приложение по управлению БД
 
 Приложение позволяет создать простую базу данных, состоящую из следующих полей:
+
 - Фамилия, Имя, Отчество
 - Дата рождения
 - Пол
+
 Управление приложением происходит с помощью консольных комманд:
+
  - add - создает запись
- - 
+ - delete - удаляет запись
+ - show_all - выводит все записи
+ - find - выполняет поиск по фамилии
+ - quit - завершает работу приложения
 
-Проект написан на Python 3.
+Проект написан на Python 3 с использованием библиотеки sqlite3.
 
-# Запуск проекта
+### Примеры запросов
+```
+add Ivanov Ivan Sergeevich 1987-09-11 M
+
+delete Ivanov Ivan Sergeevich 1987-09-11 M
+
+find Ivanov
+```
+### Запуск проекта
 
  - Клонируйте репозиторий:
-
-   git clone git@github.com:korecbtc/fitness_tracker_oop.git
-
+```
+   git clone git@github.com:korecbtc/db-terminal.git
+```
  - Перейдите в папку с проектом:
-
-   cd fitness_tracker_oop
-
- - Установите и активируйте виртуальное окружение:
-
-   python -m venv venv
-
-   source venv/Scripts/activate
-
- - Установите зависимости из файла requirements.txt
-
-   pip install -r requirements.txt
-
- - Запустите программу (homework.py)
-
-# Автор
+```
+   cd db-terminal
+```
+  - Запустите программу:
+```
+  python db-terminal.py
+```
+### Автор
 
 Иван Корец
