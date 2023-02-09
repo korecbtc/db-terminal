@@ -101,6 +101,8 @@ def input_data():
                       '<add Ivanov Ivan Sergeevich 1987-09-11 M>\n'
                       'Вывод записей таблицы - <show_all>\n'
                       'Поиск по фамилии - <find Ivanov>\n'
+                      'Удаление записи - <delete '
+                      'Ivanov Ivan Sergeevich 1987-09-11 M>\n'
                       'Выход - <quit>')
         except Exception:
             print('Введите команду в формате:\n'
@@ -108,6 +110,8 @@ def input_data():
                   '<add Ivanov Ivan Sergeevich 1987-09-11 M>\n'
                   'Вывод записей таблицы - <show_all>\n'
                   'Поиск по фамилии - <find Ivanov>\n'
+                  'Удаление записи - <delete '
+                  'Ivanov Ivan Sergeevich 1987-09-11 M>\n'
                   'Выход - <quit>')
 
 
