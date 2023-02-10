@@ -27,10 +27,12 @@ def insert(string):
 
 def select():
     """Вывод значений"""
+    print('№---------ФИО---------Дата рождения--Пол')
     cur.execute('''
-        SELECT DISTINCT name, birthday, gender
+        SELECT DISTINCT id, name, birthday, gender
         FROM people
-        ORDER BY name;
+        ORDER BY name
+        LIMIT 100;
         ''')
     count = 0
     for result in cur:
@@ -42,11 +44,13 @@ def select():
 
 def find(last_name):
     """Поиск записи по фамилии"""
+    print('№------ФИО---------Дата рождения--Пол')
     cur.execute(f'''
-        SELECT name, birthday, gender
+        SELECT id, name, birthday, gender
         FROM people
         WHERE name LIKE '{last_name}%'
-        ORDER BY name;
+        ORDER BY name
+        LIMIT 100;
         ''')
     count = 0
     for result in cur:
@@ -61,17 +65,8 @@ def delete(string):
     cur.execute(f'''
         DELETE
         FROM people
-        WHERE name LIKE '{string[0]}%'
-        AND birthday LIKE '{string[1]}'
-        AND gender LIKE '{string[2]}';
+        WHERE id LIKE '{int(string[0])}';
         ''')
-    cur.execute('''
-        SELECT DISTINCT name, birthday, gender
-        FROM people
-        ORDER BY name;
-        ''')
-    for result in cur:
-        print(*result)
 
 
 def input_data():
